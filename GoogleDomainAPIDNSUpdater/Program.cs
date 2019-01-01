@@ -29,7 +29,7 @@ namespace GoogleDomainAPIDNSUpdater
                     }
                     else
                     {
-                        logger.Info("DNS update was not successful. Check the log for more info.");
+                        logger.Warn("DNS update was not successful. Check the log for more info.");
                     }
                 }
                 else
