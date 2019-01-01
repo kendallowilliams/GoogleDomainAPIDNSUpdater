@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using NLog;
 
@@ -65,11 +62,10 @@ namespace GoogleDomainAPIDNSUpdater
                 string results = string.Empty;
                 Uri relativeUri = new Uri(App.Default.RelativePath, UriKind.Relative);
                 
-                logger.Info($"Domain: {App.Default.Domain}, IP: {ip}");
                 client.QueryString = new NameValueCollection();
                 client.QueryString.Add("hostname", App.Default.Domain);
                 client.QueryString.Add("myip", ip);
-                logger.Info($"Data: {JsonConvert.SerializeObject(client.QueryString)}");
+                logger.Info($"hostname: {App.Default.Domain}, myip: {ip}");
                 client.BaseAddress = App.Default.BaseAddress;
                 client.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(crendentials)}");
                 results = client.UploadString(relativeUri, "POST");
