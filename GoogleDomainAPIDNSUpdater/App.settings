@@ -14,10 +14,7 @@
     <Setting Name="RelativePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Domain" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="IPFile" Type="System.String" Scope="Application">
+    <Setting Name="DomainFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

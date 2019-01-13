@@ -62,18 +62,9 @@ namespace GoogleDomainAPIDNSUpdater {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Domain {
+        public string DomainFile {
             get {
-                return ((string)(this["Domain"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string IPFile {
-            get {
-                return ((string)(this["IPFile"]));
+                return ((string)(this["DomainFile"]));
             }
         }
     }
